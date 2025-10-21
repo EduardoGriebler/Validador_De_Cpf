@@ -16,7 +16,8 @@ Uma ferramenta de validação para documentos brasileiros como CPF, CNPJ e PIS, 
 - [x] Remover os botões de (fechar, maximizar e minimizar) e implementar novos.
 - [x] Implementar lógica dos botões de controle da janela (fechar, maximizar e minimizar).
 - [x] Implementar lógica no painel superior para poder arrastar a tela.
-- [ ] Implementar lógica para o CNPJ, CPF e PIS.
+- [x] Implementar lógica para o CNPJ, CPF e PIS.
+- [ ] Aprimorar o design gráfico do layout.
 
 ### Tecnologias Utilizadas
 
