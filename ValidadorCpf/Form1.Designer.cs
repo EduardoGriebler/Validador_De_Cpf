@@ -147,6 +147,7 @@
             this.btnPis.TabIndex = 0;
             this.btnPis.Text = "PIS";
             this.btnPis.UseVisualStyleBackColor = false;
+            this.btnPis.Click += new System.EventHandler(this.btnPis_Click);
             // 
             // lblTexto4
             // 
@@ -227,6 +228,7 @@
             this.lblResultado.Size = new System.Drawing.Size(280, 40);
             this.lblResultado.TabIndex = 5;
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblResultado.Visible = false;
             // 
             // Form1
             // 

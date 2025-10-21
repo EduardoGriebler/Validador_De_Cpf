@@ -119,6 +119,8 @@ namespace ValidadorCpf
             string numero = txtNumeroDigitado.Text;
             int totalDeCaracteres = numero.Length;
 
+            lblResultado.Visible = true;
+
             switch (ValorDocumentos)
             {
                 case Documentos.CNPJ:
@@ -301,6 +303,7 @@ namespace ValidadorCpf
 
             return true;
         }
+        
         private bool IsPisValido(string pis)
         {
             int[] pesosDV1 = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
