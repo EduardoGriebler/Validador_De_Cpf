@@ -12,14 +12,16 @@ Uma ferramenta de validação para documentos brasileiros como CPF, CNPJ e PIS, 
 
 **Em desenvolvimento.** 🚧
 
-A interface visual está completa. Próximos passos:
 - [x] Implementar o design gráfico do layout.
 - [x] Remover os botões de (fechar, maximizar e minimizar) e implementar novos.
-- [ ] Implementar lógica dos botões de controle da janela (fechar, maximizar e minimizar).
-- [ ] Implementar lógica no painel superior para poder arrastar a tela.
+- [x] Implementar lógica dos botões de controle da janela (fechar, maximizar e minimizar).
+- [x] Implementar lógica no painel superior para poder arrastar a tela.
+- [ ] Implementar lógica para o CNPJ, CPF e PIS.
 
 ### Tecnologias Utilizadas
+
 * C#
 * .NET Framework
 * Windows Forms
+* Windows API (via DllImport)
 * Git / GitHub
