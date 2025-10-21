@@ -40,9 +40,9 @@
             this.lblTexto4 = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.pnlBarraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,32 +175,7 @@
             this.pnlBarraTitulo.Name = "pnlBarraTitulo";
             this.pnlBarraTitulo.Size = new System.Drawing.Size(320, 35);
             this.pnlBarraTitulo.TabIndex = 6;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFechar.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(270, 0);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(50, 35);
-            this.btnFechar.TabIndex = 0;
-            this.btnFechar.Text = "✖";
-            this.btnFechar.UseVisualStyleBackColor = true;
-            // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.FlatAppearance.BorderSize = 0;
-            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximizar.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.btnMaximizar.Location = new System.Drawing.Point(220, 0);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(50, 35);
-            this.btnMaximizar.TabIndex = 0;
-            this.btnMaximizar.Text = "🗖";
-            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.pnlBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBarraTitulo_MouseDown);
             // 
             // btnMinimizar
             // 
@@ -214,6 +189,41 @@
             this.btnMinimizar.TabIndex = 0;
             this.btnMinimizar.Text = "🗕";
             this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseEnter += new System.EventHandler(this.btnMinimizar_MouseEnter);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.FlatAppearance.BorderSize = 0;
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.Location = new System.Drawing.Point(220, 0);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(50, 35);
+            this.btnMaximizar.TabIndex = 0;
+            this.btnMaximizar.Text = "🗖";
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMaximizar.MouseEnter += new System.EventHandler(this.btnMaximizar_MouseEnter);
+            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Segoe UI Symbol", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(270, 0);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(50, 35);
+            this.btnFechar.TabIndex = 0;
+            this.btnFechar.Text = "✖";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnFechar.MouseEnter += new System.EventHandler(this.btnFechar_MouseEnter);
+            this.btnFechar.MouseLeave += new System.EventHandler(this.btnFechar_MouseLeave);
             // 
             // Form1
             // 
