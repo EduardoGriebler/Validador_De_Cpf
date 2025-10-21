@@ -38,11 +38,11 @@
             this.btnCpf = new System.Windows.Forms.Button();
             this.btnPis = new System.Windows.Forms.Button();
             this.lblTexto4 = new System.Windows.Forms.Label();
-            this.lblResultado = new System.Windows.Forms.Label();
             this.pnlBarraTitulo = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.lblResultado = new System.Windows.Forms.Label();
             this.pnlBarraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.btnCnpj.TabIndex = 0;
             this.btnCnpj.Text = "CNPJ";
             this.btnCnpj.UseVisualStyleBackColor = false;
+            this.btnCnpj.Click += new System.EventHandler(this.btnCnpj_Click);
             // 
             // txtNumeroDigitado
             // 
@@ -71,6 +72,7 @@
             this.txtNumeroDigitado.Size = new System.Drawing.Size(280, 28);
             this.txtNumeroDigitado.TabIndex = 1;
             this.txtNumeroDigitado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumeroDigitado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroDigitado_KeyPress);
             // 
             // lblTexto2
             // 
@@ -106,6 +108,7 @@
             this.btnValidar.TabIndex = 4;
             this.btnValidar.Text = "Validar";
             this.btnValidar.UseVisualStyleBackColor = false;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // lblTexto3
             // 
@@ -130,6 +133,7 @@
             this.btnCpf.TabIndex = 0;
             this.btnCpf.Text = "CPF";
             this.btnCpf.UseVisualStyleBackColor = false;
+            this.btnCpf.Click += new System.EventHandler(this.btnCpf_Click);
             // 
             // btnPis
             // 
@@ -154,16 +158,6 @@
             this.lblTexto4.TabIndex = 2;
             this.lblTexto4.Text = "Resultado";
             this.lblTexto4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblResultado
-            // 
-            this.lblResultado.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(20, 343);
-            this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(280, 40);
-            this.lblResultado.TabIndex = 5;
-            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblResultado.Visible = false;
             // 
             // pnlBarraTitulo
             // 
@@ -225,6 +219,15 @@
             this.btnFechar.MouseEnter += new System.EventHandler(this.btnFechar_MouseEnter);
             this.btnFechar.MouseLeave += new System.EventHandler(this.btnFechar_MouseLeave);
             // 
+            // lblResultado
+            // 
+            this.lblResultado.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.Location = new System.Drawing.Point(20, 343);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(280, 40);
+            this.lblResultado.TabIndex = 5;
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,11 +267,11 @@
         private System.Windows.Forms.Button btnCpf;
         private System.Windows.Forms.Button btnPis;
         private System.Windows.Forms.Label lblTexto4;
-        private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.Panel pnlBarraTitulo;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
 
