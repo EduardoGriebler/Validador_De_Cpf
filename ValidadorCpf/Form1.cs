@@ -174,7 +174,29 @@ namespace ValidadorCpf
                     break;
 
                 case Documentos.PIS:
-                    // A fazer
+                    if (totalDeCaracteres == 11)
+                    {
+                        if (IsPisValido(numero))
+                        {
+                            lblResultado.Text = "PIS VÁLIDO";
+                            lblResultado.ForeColor = ColorTranslator.FromHtml("#27AE60");
+                        }
+                        else
+                        {
+                            lblResultado.Text = "PIS INVÁLIDO";
+                            lblResultado.ForeColor = ColorTranslator.FromHtml("#E74C3C");
+                        }
+                    }
+                    else if (totalDeCaracteres == 0)
+                    {
+                        lblResultado.Text = "ERRO!\n  Digite o número!";
+                        lblResultado.ForeColor = ColorTranslator.FromHtml("#E74C3C");
+                    }
+                    else
+                    {
+                        lblResultado.Text = "ERRO!\n O PIS deve ter 11 dígitos!";
+                        lblResultado.ForeColor = ColorTranslator.FromHtml("#E74C3C");
+                    }
                     break;
             }
         }
@@ -273,6 +295,38 @@ namespace ValidadorCpf
 
             // Ver se o ultimo digito está certo
             if ((cpf[10] - '0') != digitoVerificador)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        private bool IsPisValido(string pis)
+        {
+            int[] pesosDV1 = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+            int soma;
+            int resto;
+            int digitoVerificador;
+
+            // Verificar se os numeros do PIS são iguais.    Ex: 555.55555.55-5
+            if (pis.Distinct().Count() == 1)
+            {
+                return false;
+            }
+
+            // Calculo do digito
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                soma = soma + (pis[i] - '0') * pesosDV1[i];
+            }
+
+            resto = soma % 11;
+            digitoVerificador = (resto < 2) ? 0 : 11 - resto;
+
+            // Ver se o ultimo digito está certo
+            if ((pis[10] - '0') != digitoVerificador)
             {
                 return false;
             }
