@@ -88,7 +88,7 @@ namespace ValidadorCpf
             btnMinimizar.BackColor = pnlBarraTitulo.BackColor;
         }
 
-        // Permitir somente números
+        // Permitir somente numeros
         private void txtNumeroDigitado_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -97,20 +97,36 @@ namespace ValidadorCpf
             }
         }
 
+        // Cores para os botões (CNPJ, CPF e PIS)
+        Color corBotaoSelecionado = ColorTranslator.FromHtml("#4A6074");
+        Color corBotaoPadrao = ColorTranslator.FromHtml("#34495E");
+
         // Botões (CNPJ, CPF e PIS)
         private void btnCnpj_Click(object sender, EventArgs e)
         {
             ValorDocumentos = Documentos.CNPJ;
+
+            btnCnpj.BackColor = corBotaoSelecionado;
+            btnCpf.BackColor = corBotaoPadrao;
+            btnPis.BackColor = corBotaoPadrao;
         }
 
         private void btnCpf_Click(object sender, EventArgs e)
         {
             ValorDocumentos = Documentos.CPF;
+
+            btnCpf.BackColor = corBotaoSelecionado;
+            btnCnpj.BackColor = corBotaoPadrao;
+            btnPis.BackColor = corBotaoPadrao;
         }
 
         private void btnPis_Click(object sender, EventArgs e)
         {
             ValorDocumentos = Documentos.PIS;
+
+            btnPis.BackColor = corBotaoSelecionado;
+            btnCnpj.BackColor = corBotaoPadrao;
+            btnCpf.BackColor = corBotaoPadrao;
         }
 
         // Validar
@@ -203,6 +219,7 @@ namespace ValidadorCpf
             }
         }
 
+        // Validação CNPJ
         private bool IsCnpjValido(string cnpj)
         {
 
@@ -219,7 +236,7 @@ namespace ValidadorCpf
                 return false;
             }
 
-            // Calculo do primeiro digito
+            // Cálculo do primeiro digito
             soma = 0;
             for (int i = 0; i < 12; i++)
             {
@@ -235,7 +252,7 @@ namespace ValidadorCpf
                 return false;
             }
 
-            // Calculo do segundo digito
+            // Cálculo do segundo digito
             soma = 0;
             for (int i = 0; i < 13; i++)
             {
@@ -254,6 +271,7 @@ namespace ValidadorCpf
             return true;
         }
 
+        // Validação CPF
         private bool IsCpfValido(string cpf)
         {
             int[] pesosDV1 = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -269,7 +287,7 @@ namespace ValidadorCpf
                 return false;
             }
 
-            // Calculo do primeiro digito
+            // Cálculo do primeiro digito
             soma = 0;
             for (int i = 0; i < 9; i++)
             {
@@ -285,7 +303,7 @@ namespace ValidadorCpf
                 return false;
             }
 
-            // Calculo do segundo digito
+            // Cálculo do segundo digito
             soma = 0;
             for (int i = 0; i < 10; i++)
             {
@@ -303,7 +321,8 @@ namespace ValidadorCpf
 
             return true;
         }
-        
+
+        // Validação PIS
         private bool IsPisValido(string pis)
         {
             int[] pesosDV1 = { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -318,7 +337,7 @@ namespace ValidadorCpf
                 return false;
             }
 
-            // Calculo do digito
+            // Cálculo do digito
             soma = 0;
             for (int i = 0; i < 10; i++)
             {
